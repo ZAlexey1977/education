@@ -365,25 +365,82 @@ on some row*/
   functionWithArgs(1, 2);
   functionWithArgs(7, 9);
 }
-////////////////////////////// unit 50 /////////////////////////////////
+////////////////////////////// unit 51 /////////////////////////////////
 {
+  function timesFive(num) {
+    return num * 5;
+  }
 
+  timesFive(5);
+  timesFive(2);
+  timesFive(0);
 }
-////////////////////////////// unit 50 /////////////////////////////////
+////////////////////////////// unit 52 /////////////////////////////////
 {
+  // Декларуйте змінну myGlobal під цим рядком
+  let myGlobal = 10;
 
+  function fun1() {
+    oopsGlobal = 5;
+
+  }
+
+  // Змініть код лише над цим рядком
+
+  function fun2() {
+    let output = "";
+    if (typeof myGlobal != "undefined") {
+      output += "myGlobal: " + myGlobal;
+    }
+    if (typeof oopsGlobal != "undefined") {
+      output += " oopsGlobal: " + oopsGlobal;
+    }
+    console.log(output);
+  }
 }
-////////////////////////////// unit 50 /////////////////////////////////
+////////////////////////////// unit 53 /////////////////////////////////
 {
+  function myLocalScope() {
+    // Змініть код лише під цим рядком
+    let myVar;
+    console.log('inside myLocalScope', myVar);
+  }
+  myLocalScope();
 
+  // Запустіть та перевірте консоль
+  // myVar не визначений за межами myLocalScope
+  console.log('outside myLocalScope', myVar);
 }
-////////////////////////////// unit 50 /////////////////////////////////
+////////////////////////////// unit 54 /////////////////////////////////
 {
+  // Налаштування
+  const outerWear = "T-Shirt";
 
+  function myOutfit() {
+    // Змініть код лише під цим рядком
+    const outerWear = "sweater";
+    // Змініть код лише над цим рядком
+    return outerWear;
+  }
+
+  myOutfit();
 }
-////////////////////////////// unit 50 /////////////////////////////////
+////////////////////////////// unit 55 /////////////////////////////////
 {
 
+  function addThree() {
+    sum = sum + 3;
+  }
+
+  // Змініть код лише під цим рядком
+  function addFive() {
+    sum = sum + 5;
+  }
+
+  // Змініть код лише над цим рядком
+
+  addThree();
+  addFive();
 }
 ////////////////////////////// unit 50 /////////////////////////////////
 {
