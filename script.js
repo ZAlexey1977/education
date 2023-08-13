@@ -790,11 +790,60 @@ on some row*/
 }
 ////////////////////////////// unit 78 /////////////////////////////////
 {
+  function switchOfStuff(val) {
+    let answer = "";
+    // Змініть код лише під цим рядком
 
+    switch (val) {
+      case "a":
+        answer = "apple";
+        break;
+      case "b":
+        answer = "bird";
+        break;
+      case "c":
+        answer = "cat";
+        break;
+      default:
+        answer = "stuff";
+        break;
+    }
+
+    // Змініть код лише над цим рядком
+    return answer;
+  }
+
+  switchOfStuff(1);
 }
 ////////////////////////////// unit 79 /////////////////////////////////
 {
+  function sequentialSizes(val) {
+    let answer = "";
+    // Змініть код лише під цим рядком
+    let result = "";
+    switch (val) {
+      case 1:
+      case 2:
+      case 3:
+        answer = "Low";
+        break;
+      case 4:
+      case 5:
+      case 6:
+        answer = "Mid";
+        break;
+      case 7:
+      case 8:
+      case 9:
+        answer = "High";
+        break;
+    }
 
+    // Змініть код лише над цим рядком
+    return answer;
+  }
+
+  sequentialSizes(1);
 }
 ////////////////////////////// unit 80 /////////////////////////////////
 {
