@@ -409,7 +409,7 @@ on some row*/
 
   // Запустіть та перевірте консоль
   // myVar не визначений за межами myLocalScope
-  console.log('outside myLocalScope', myVar);
+  //console.log('outside myLocalScope', myVar);
 }
 ////////////////////////////// unit 54 /////////////////////////////////
 {
@@ -429,11 +429,13 @@ on some row*/
 {
 
   function addThree() {
+    let sum;
     sum = sum + 3;
   }
 
   // Змініть код лише під цим рядком
   function addFive() {
+    let sum;
     sum = sum + 5;
   }
 
@@ -715,11 +717,76 @@ on some row*/
 }
 ////////////////////////////// unit 76 /////////////////////////////////
 {
+  const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+  function golfScore(par, strokes) {
+    // Змініть код лише під цим рядком
+    let str = "";
+
+    if (strokes == 1) {
+      str = names[0];
+    }
+    else if (strokes <= par - 2) {
+      str = names[1];
+    }
+    else if (strokes <= par - 1) {
+      str = names[2];
+    }
+    else if (par == strokes) {
+      str = names[3];
+    }
+    else if (strokes <= par + 1) {
+      str = names[4];
+    }
+    else if (strokes <= par + 2) {
+      str = names[5];
+    }
+    else if (strokes >= par + 3) {
+      str = names[6];
+    }
+
+    return str;
+    // Змініть код лише над цим рядком
+  }
+
+  log(golfScore(4, 1));
+  log(golfScore(4, 2));
+  log(golfScore(5, 2));
+  log(golfScore(4, 3));
+  log(golfScore(4, 4));
+  log(golfScore(1, 1));
+  log(golfScore(5, 5));
+  log(golfScore(4, 5));
+  log(golfScore(4, 6));
+  log(golfScore(4, 7));
+  log(golfScore(5, 9));
 
 }
 ////////////////////////////// unit 77 /////////////////////////////////
 {
+  function caseInSwitch(val) {
+    let answer = "";
+    // Змініть код лише під цим рядком
+    switch (val) {
+      case 1:
+        answer = "alpha";
+        break;
+      case 2:
+        answer = "beta";
+        break;
+      case 3:
+        answer = "gamma";
+        break;
+      case 4:
+        answer = "delta";
+        break;
+    }
 
+    // Змініть код лише над цим рядком
+    return answer;
+  }
+
+  caseInSwitch(1);
 }
 ////////////////////////////// unit 78 /////////////////////////////////
 {
