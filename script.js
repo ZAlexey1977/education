@@ -458,7 +458,21 @@ on some row*/
 }
 ////////////////////////////// unit 57 /////////////////////////////////
 {
+  function nextInLine(arr, item) {
+    // Змініть код лише під цим рядком
+    arr.push(item);
+    return arr.shift();
+    // Змініть код лише над цим рядком
 
+  }
+
+  // Налаштування
+  let testArr = [2];
+
+  // Відобразити код
+  console.log("Before: " + JSON.stringify(testArr));
+  console.log(nextInLine(testArr, 1));
+  console.log("After: " + JSON.stringify(testArr));
 }
 ////////////////////////////// unit 58 /////////////////////////////////
 {
@@ -906,29 +920,61 @@ on some row*/
 }
 ////////////////////////////// unit 83 /////////////////////////////////
 {
-  // let count = 0;
+  let count = 0;
 
-  // function cc(card) {
-  //   // Змініть код лише під цим рядком
-  //   if (2 || 3 || 4 || 5 || 6) {
-  //     count++;
-  //   }
-  //   else if (7 || 8 || 9) {
-  //     count = count + 0;
-  //   }
-  //   else if (10 || "J" || "Q" || "K" || "A") {
-  //     count--;
-  //   }
+  function cc(card) {
+    // Змініть код лише під цим рядком
 
-  //   if (count >= 0) {
+    switch (card) {
+      case 2:
+        count++;
+        break;
+      case 3:
+        count++;
+        break;
+      case 4:
+        count++;
+        break;
+      case 5:
+        count++;
+        break;
+      case 6:
+        count++;
+        break;
+      case 7:
+        count += 0;
+        break;
+      case 8:
+        count += 0;
+        break;
+      case 9:
+        count += 0;
+        break;
+      case 10:
+        count--;
+        break;
+      case "J":
+        count--;
+        break;
+      case "Q":
+        count--;
+        break;
+      case "K":
+        count--;
+        break;
+      case "A":
+        count--;
+        break;
+    }
 
-  //     return count + ' Bet';
-  //   }
-  //   return count + 'Hold';
-  //   // Змініть код лише над цим рядком
-  // }
-  // log(cc(2, 3, 4, 5, 6));
-  // cc(2); cc(3); cc(7); cc('K'); cc('A');
+    if (count > 0) {
+      return count + ' Bet';
+    }
+    return count + ' Hold';
+    // Змініть код лише над цим рядком
+  }
+
+  cc(2); cc(3); cc(7); cc('K'); cc('A');
 }
 ////////////////////////////// unit 84 /////////////////////////////////
 {
