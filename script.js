@@ -1041,7 +1041,7 @@ on some row*/
 
   log(phoneticLookup("charlie"));
 }
-////////////////////////////// unit 90 /////////////////////////////////
+////////////////////////////// unit 92 /////////////////////////////////
 {
   function checkObj(obj, checkProp) {
     // Змініть код лише під цим рядком
@@ -1053,9 +1053,29 @@ on some row*/
   }
   log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "house"));
 }
-////////////////////////////// unit 90 /////////////////////////////////
+////////////////////////////// unit 93 /////////////////////////////////
 {
-
+  const myMusic = [
+    {
+      "artist": "Billy Joel",
+      "title": "Piano Man",
+      "release_year": 1973,
+      "formats": [
+        "CD",
+        "8T",
+        "LP"
+      ],
+      "gold": true
+    },
+    {
+      "artist": "King",
+      "title": "Rain",
+      "release_year": 1999,
+      "formats": [
+        "CD", "8T", "LP"
+      ]
+    }
+  ];
 }
 ////////////////////////////// unit 90 /////////////////////////////////
 {
