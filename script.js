@@ -1093,9 +1093,28 @@ on some row*/
 
   const gloveBoxContents = myStorage.car.inside["glove box"];
 }
-////////////////////////////// unit 90 /////////////////////////////////
+////////////////////////////// unit 95 /////////////////////////////////
 {
+  const myPlants = [
+    {
+      type: "flowers",
+      list: [
+        "rose",
+        "tulip",
+        "dandelion"
+      ]
+    },
+    {
+      type: "trees",
+      list: [
+        "fir",
+        "pine",
+        "birch"
+      ]
+    }
+  ];
 
+  const secondTree = myPlants[1].list[1];
 }
 ////////////////////////////// unit 90 /////////////////////////////////
 {
