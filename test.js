@@ -1,61 +1,101 @@
-let count = 0;
+log = console.log;
 
-function cc(card) {
+
+// Налаштування
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
   // Змініть код лише під цим рядком
-
-  switch (card) {
-    case 2:
-      count++;
-      break;
-    case 3:
-      count++;
-      break;
-    case 4:
-      count++;
-      break;
-    case 5:
-      count++;
-      break;
-    case 6:
-      count++;
-      break;
-    case 7:
-      count += 0;
-      break;
-    case 8:
-      count += 0;
-      break;
-    case 9:
-      count += 0;
-      break;
-    case 10:
-      count--;
-      break;
-    case "J":
-      count--;
-      break;
-    case "Q":
-      count--;
-      break;
-    case "K":
-      count--;
-      break;
-    case "A":
-      count--;
-      break;
+  if (contacts.length < 1) {
+    return "Array empty";
+  }
+  for (let i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      log(contacts[i].firstName);
+      return contacts[i][prop];
+    }
+    if (contacts[i][prop] == "undefined") {
+      return "No such property"
+    }
+    if (contacts[i].firstName != name) {
+      return "No such contact"
+    }
   }
 
-  if (count > 0) {
-    return count + ' Bet';
-  }
-  return count + ' Hold';
   // Змініть код лише над цим рядком
 }
 
+log(lookUpProfile("Kristian", "likees"));
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// // unit  96 Налаштування
+// const recordCollection = {
+//   2548: {
+//     albumTitle: 'Slippery When Wet',
+//     artist: 'Bon Jovi',
+//     tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//   },
+//   2468: {
+//     albumTitle: '1999',
+//     artist: 'Prince',
+//     tracks: ['1999', 'Little Red Corvette']
+//   },
+//   1245: {
+//     artist: 'Robert Palmer',
+//     tracks: []
+//   },
+//   5439: {
+//     albumTitle: 'ABBA Gold'
+//   }
+// };
 
-//cc(10);
-//cc("J");
-cc(7);
-cc(8);
-log(cc(9));
+// // Змініть код лише під цим рядком
+// function updateRecords(records, id, prop, value) {
+//   if (value == "") {
+//     log(records[id][prop]);
+//     delete records[id][prop];
+
+//   }
+//   //records[id][prop] = value;
+//   //log(records[id]);
+//   return records;
+// }
+
+// //updateRecords(recordCollection, 5439, 'artist', '');
+// //log(updateRecords(recordCollection, 5439, 'artist', ''));
+
+// log(updateRecords(recordCollection, 2468, "tracks", "Free"));
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// unit 104
+// function sum(arr, n) {
+//   // Змініть код лише під цим рядком
+
+//   // Змініть код лише над цим рядком
+// }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
