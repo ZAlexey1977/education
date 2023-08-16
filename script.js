@@ -1310,27 +1310,26 @@ on some row*/
     },
   ];
 
-  // function lookUpProfile(name, prop) {
-  //   // Змініть код лише під цим рядком
-  //   if (contacts.length < 1) {
-  //     return "Array empty";
-  //   }
-  //   for (let i = 0; i < contacts.length; i++) {
-  //     if (contacts[i].firstName == name) {
-  //       return contacts[i][prop];
-  //     }
-  //     else if (contacts[i].firstName == name && contacts[i][prop] == undefined) {
-  //       return "No such property"
-  //     }
-  //     else {
-  //       return "No such contact"
-  //     }
-  //   }
+  function lookUpProfile(firstName, prop) {
+    // Змініть код лише під цим рядком
+    let result;
+    for (let i = 0; i < contacts.length; i++) {
+      if (firstName == contacts[i].firstName && contacts[i].hasOwnProperty(prop)) {
+        result = contacts[i][prop];
+        break;
+      }
+      else if (firstName == contacts[i].firstName && !(contacts[i].hasOwnProperty(prop))) {
+        result = "No such property";
+        break;
+      }
+      else if (!(contacts[i].hasOwnProperty(firstName)) && (contacts[i].hasOwnProperty(prop) || !contacts[i].hasOwnProperty(prop))) {
+        result = "No such contact";
+      }
+    }
+    return result;
+  }
 
-  //   // Змініть код лише над цим рядком
-  // }
-
-  lookUpProfile("Akira", "likes");
+  log(lookUpProfile("Akira", "likes"));
 }
 ////////////////////////////// unit 106 /////////////////////////////////
 {
