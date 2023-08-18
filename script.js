@@ -1403,7 +1403,14 @@ on some row*/
 }
 ////////////////////////////// unit 114 /////////////////////////////////
 {
-
+  function rangeOfNumbers(startNum, endNum) {
+    if (startNum >= endNum) return [endNum];
+    else {
+      let arr = rangeOfNumbers(startNum, endNum - 1);
+      arr.push(endNum);
+      return arr;
+    }
+  };
 }
 ////////////////////////////// unit 115 /////////////////////////////////
 {
